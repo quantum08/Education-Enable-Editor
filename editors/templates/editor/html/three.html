@@ -1,0 +1,70 @@
+<html>
+
+  <head>
+
+    <title>HTML Tutorials</title>
+	
+	<title>HTML Tutorials</title>
+      {% load staticfiles %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+     <link href="http://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{% static 'editor/images/html_one.css' %}" />
+
+
+  </head>
+  <body>
+
+    <h1>HTML Tutorials</h1>
+	
+	<h2>3. Formatting Texts</h2>
+	
+	<h3>3.1 HTML &ltb> and &ltstrong> Elements</h3>
+	
+	<p>The HTML &ltb> element defines bold text, without any extra importance.</p>
+	
+	<h3>EXAMPLE</h3>
+	
+	<b>This text is bold</b>
+	
+	<h4>Corresponding code</h4>
+	
+	<p>&ltb>This text is bold&/b></p>
+	
+	<p>The HTML &ltstrong> element defines strong text, with added semantic "strong" importance.</p>
+	
+	<h3>EXAMPLE</h3>
+	
+	<strong>This text is strong</strong>
+	
+	<h4>Corresponding code</h4>
+	
+	<p>&ltstrong>This text is strong&lt/strong></p>
+	
+	<h3>3.2 HTML &lti> and &ltem> Elements</h3>
+	
+	<p>The HTML &lti> element defines italic text, without any extra importance.</p>
+	
+	<h3>EXAMPLE</h3>
+	
+	<i>This text is italic</i>
+	
+	<h4>Corresponding code</h4>
+	
+	<p>&lti>This text is italic&lt/i></p>
+	
+	<p>The HTML &ltem> element defines emphasized text, with added semantic importance.</p>
+	
+	<h3>EXAMPLE</h3>
+	
+	<em>This text is emphasized</em>
+	
+	<h4>Corresponding code</h4>
+	
+	<p>&ltem>This text is emphasized&lt/em></p>
+	
+	<p><a href="{% url 'editor:html_four' %}"><input type="submit" value="Next" id="submitButton"></a>
+		</p>
+	
+	</body>
+	
+</html>

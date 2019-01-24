@@ -1,0 +1,33 @@
+<html>
+
+  <head>
+
+    <title>HTML Tutorials</title>
+      {% load staticfiles %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+     <link href="http://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{% static 'editor/images/html_one.css' %}" />
+
+  </head>
+  <body>
+
+    <h1>HTML Tutorials</h1>
+
+	<p id="intro">With HTML you can create your own Website.
+
+	This tutorial teaches you everything about HTML</p>
+
+	<h2>1. HTML Page structure</h2>
+
+	<p>Below is a visualization of an HTML page structure:</p>
+
+	<div id="img"><img src="{% static 'editor/images/a.png' %}" ,align="left"></div>
+	
+	<p>Only the content inside the &ltbody> section (the white area above) is displayed in a browser.</p>
+	
+	<p><a href="{% url 'editor:html_two' %}"><input type="submit" value="Next" id="submitButton"></a>
+		</p>
+	
+	</body>
+
+</html>

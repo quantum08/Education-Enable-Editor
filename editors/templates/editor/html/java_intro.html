@@ -1,0 +1,34 @@
+<html>
+
+  <head>
+
+    <title>JAVASCRIPT Tutorials</title>
+      {% load staticfiles %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+     <link href="http://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{% static 'editor/images/html_one.css' %}" />
+
+  </head>
+  <body>
+
+    <h1>JAVASCRIPT Tutorials</h1>
+
+    <div>div>
+        <p id="intro">One of many JavaScript HTML methods is getElementById().</p>
+        <p>This example uses the method to "find" an HTML element (with id="demo") and changes the element content (innerHTML) to "Hello JavaScript":</p>
+        <img src="{% static 'editor/images/java_html.png' %}"
+    </div>
+
+    <div>div>
+        <h1>JavaScript Can Change HTML Styles (CSS)</h1>
+        <p>Changing the style of an HTML element, is a variant of changing an HTML attribute:</p>
+
+        <img src="{% static 'editor/images/java_css.png' %}"
+    </div>
+
+	<p><a href="{% url 'editor:html_two' %}"><input type="submit" value="Next" id="submitButton"></a>
+		</p>
+
+	</body>
+
+</html>

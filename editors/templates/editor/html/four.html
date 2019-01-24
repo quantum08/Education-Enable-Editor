@@ -1,0 +1,70 @@
+<html>
+
+  <head>
+
+    <title>HTML Tutorials</title>
+	
+	<title>HTML Tutorials</title>
+      {% load staticfiles %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+     <link href="http://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{% static 'editor/images/html_one.css' %}" />
+
+
+  </head>
+  <body>
+
+    <h1>HTML Tutorials</h1>
+
+	<h2>4. HTML Lists</h2>
+	
+	<h3>4.1 Unordered Lists</h3>
+	
+	<p>An unordered list starts with the &ltul> tag. Each list item starts with the &ltli> tag.
+
+	The list items will be marked with bullets (small black circles) by default:</p>
+	
+	<h3>EXAMPLE</h3>
+	
+	<ul>
+  	<li>Coffee</li>
+  	<li>Tea</li>
+ 	<li>Milk</li>
+	</ul>
+	
+	<h4>Corresponding code</h4>
+	
+	<p>&ltul></p>
+  	<p>&ltli>Coffee&lt/li></p>
+  	<p>&ltli>Tea&lt/li></p>
+ 	<p>&ltli>Milk&lt/li></p>
+	<p>&lt/ul></p>
+	
+	<h3>4.2 Ordered Lists</h3>
+	
+	<p>An ordered list starts with the &ltol> tag. Each list item starts with the &ltli> tag.
+
+	The list items will be marked with numbers by default:</p>
+	
+	<h3>EXAMPLE</h3>
+	
+	<ol>
+  	<li>Coffee</li>
+  	<li>Tea</li>
+  	<li>Milk</li>
+	</ol>
+	
+	<h4>Corresponding code</h4>
+	
+	<p>&ltol></p>
+  	<p>&ltli>Coffee&lt/li></p>
+  	<p>&ltli>Tea&lt/li></p>
+  	<p>&ltli>Milk&lt/li></p>
+	<p>&lt/ol></p>
+	
+	<p><a href="{% url 'editor:html_five' %}"><input type="submit" value="Next" id="submitButton"></a>
+		</p>
+	
+	</body>
+	
+</html>

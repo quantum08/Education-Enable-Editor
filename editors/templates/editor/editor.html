@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Editor</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+     <link href="http://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="/static/editor/images/nav.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="/static/editor/js/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/static/editor/js/ext-language_tools.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+             <div class="container-fluid">
+
+                 <!-- Logo -->
+
+                 <div class="navbar-header">
+                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topNavBar">
+                         <span class="icon-bar"></span>
+                         <span class="icon-bar"></span>
+                         <span class="icon-bar"></span>
+                     </button>
+                     <a class="navbar-brand" href="/editor/">Editor</a>
+                 </div>
+                 <ul class="nav navbar-nav navbar-right">
+                     <li class="">
+                         <a href="/editor/register/">
+                             <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>&nbsp;
+                             Register
+                         </a>
+                     </li>
+                     <li class="">
+                         <a href="/editor/signin/">
+                             <span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;
+                             Login
+                         </a>
+                     </li>
+                     <li class="">
+                         <a href="/editor/editor/">
+                             <span class="glyphicon glyphicon-film" aria-hidden="true"></span>&nbsp;
+                             IDE
+                         </a>
+                     </li>
+                 </ul>
+             </div>
+    </nav>
+    <div class="sec-widget" data-widget="80f41ec5e20801a871f045b8852c1c9d"></div>
+    <script>
+        SEC_BASE = "compilers.widgets.sphere-engine.com";
+        SEC_HTTPS = true;
+        (function(d, s, id){ SEC = window.SEC || (window.SEC = []);
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return; js = d.createElement(s); js.id = id;
+          js.src = (SEC_HTTPS ? "https" : "http") + "://" + SEC_BASE + "/static/sdk/sdk.js";
+          fjs.parentNode.insertBefore(js, fjs);
+
+          SEC.ready = function(f){
+              if (document.readyState != "loading" && document.readyState != "interactive") f();
+              else window.addEventListener("load", f);
+          };
+
+        }(document, "script", "sphere-engine-compilers-jssdk"));
+     </script>
+
+</body>
+</html>

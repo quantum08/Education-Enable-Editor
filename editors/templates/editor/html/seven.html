@@ -1,0 +1,73 @@
+<html>
+
+  <head>
+
+    <title>HTML Tutorials</title>
+	
+	<title>HTML Tutorials</title>
+      {% load staticfiles %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+     <link href="http://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{% static 'editor/images/html_one.css' %}" />
+
+
+  </head>
+  <body>
+
+    <h1>HTML Tutorials</h1>
+	
+	<h2>7. HTML Tables</h2>
+	
+	<h3>Defining an HTML Table</h3>
+	
+	<p>An HTML table is defined with the &lttable> tag.</p>
+	
+	<p>Each table row is defined with the &lttr> tag.
+	A table header is defined with the &ltth> tag. By default, table headings are bold and centered. A table data/cell is defined with the &lttd> tag.</p>
+	
+	<h3>Example</h3>
+	
+	<table>
+  	<tr>
+    <th>Firstname</th>
+    	<th>Lastname</th> 
+    	<th>Age</th>
+  	</tr>
+  	<tr>
+    	<td>Jill</td>
+    	<td>Smith</td> 
+    	<td>50</td>
+  	</tr>
+ 	<tr>
+    	<td>Eve</td>
+    	<td>Jackson</td> 
+    	<td>94</td>
+  	</tr>
+	</table>
+	
+	<h4>Corresponding code</h4>
+	
+	<p>&lttable>
+	<p>&lttr>
+    		<p>&ltth>Firstname</th>
+    		<p>&ltth>Lastname</th> 
+    		<p>&ltth>Age</th>
+  		<p>&lt/tr>
+  		<p>&lttr>
+    		<p>&lttd>Jill</td>
+    		<p>&lttd>Smith</td> 
+    		<p>&lttd>50</td>
+  		<p>&lt/tr>
+ 		<p>&lttr>
+    		<p>&lttd>Eve</td>
+    		<p>&lttd>Jackson</td> 
+    		<p>&lttd>94</td>
+  		<p>&lt/tr>
+		<p>&lt/table></p>
+	
+	<p><a href="{% url 'editor:index' %}"><input type="submit" value="Next" id="submitButton"></a>
+		</p>
+	
+	</body>
+	
+</html>

@@ -1,0 +1,40 @@
+<html>
+
+  <head>
+
+    <title>HTML Tutorials</title>
+	
+	<title>HTML Tutorials</title>
+      {% load staticfiles %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+     <link href="http://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{% static 'editor/images/html_one.css' %}" />
+
+
+  </head>
+  <body>
+
+    <h1>HTML Tutorials</h1>
+
+	<h2>5. HTML Images</h2>
+	
+	<p>Images can improve the design and the appearance of a web page.</p>
+	
+	<h3>HTML &ltimg> Tag</h3>
+	
+	<p>In HTML, images are defined with the &ltimg> tag.
+
+	The &ltimg> tag is empty, it contains attributes only, and does not have a closing tag.
+
+	The src attribute specifies the URL (web address) of the image:
+	
+	<p>How to insert an image:</p>
+	
+	<p>&ltimg src="url"></p>
+	
+	<p><a href="{% url 'editor:html_six' %}"><input type="submit" value="Next" id="submitButton"></a>
+		</p>
+	
+	</body>
+	
+</html>

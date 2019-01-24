@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}Editor{% endblock %}</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+     <link href="http://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{% static 'editor/images/nav.css' %}" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="{% static 'editor/js/ace.js' %}" type="text/javascript" charset="utf-8"></script>
+    <script src="{% static 'editor/js/ext-language_tools.js' %}" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+             <div class="container-fluid">
+
+                 <!-- Logo -->
+
+                 <div class="navbar-header">
+                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topNavBar">
+                         <span class="icon-bar"></span>
+                         <span class="icon-bar"></span>
+                         <span class="icon-bar"></span>
+                     </button>
+                     <a class="navbar-brand" href="{% url 'editor:index' %}">Editor</a>
+                 </div>
+                 <button class="btn btn-danger navbar-btn" type="button" onclick="setState()">Apply</button>
+                 <button class="btn btn-danger navbar-btn" type="button" onclick="runCode()">Run</button>
+                 <select class="custom-select" id="optionGroup">
+                     <option selected="python">python</option>
+                     <option value="c_cpp">c_cpp</option>
+                     <option value="javascript">javaScript</option>
+                     <option value="java">java</option>
+                     <option value="css">css</option>
+                 </select>
+                 <select class="custom-select" id="themeGroup" >
+                     <option selected="monokai">monokai</option>
+                     <option value="ambiance">Ambiance</option>
+                     <option value="github">Github</option>
+                     <option value="dracula">Dracula</option>
+                 </select>
+                 <select class="custom-select" type="number"  id="fontGroup" >
+                     <option selected=10>10</option>
+                     <option value=11>11</option>
+                     <option value=12>12</option>
+                     <option value=13>13</option>
+                     <option selected=14>14</option>
+                     <option value=15>15</option>
+                     <option value=16>16</option>
+                     <option value=17>17</option>
+                 </select>
+                 <ul class="nav navbar-nav navbar-right">
+                     <li class="">
+                         <a href="{% url 'editor:register' %}">
+                             <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>&nbsp;
+                             Register
+                         </a>
+                     </li>
+                     <li class="">
+                         <a href="{% url 'editor:Signin' %}">
+                             <span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;
+                             Login
+                         </a>
+                     </li>
+                     <li class="">
+                         <a href="{% url 'editor:editor' %}">
+                             <span class="glyphicon glyphicon-film" aria-hidden="true"></span>&nbsp;
+                             IDE
+                         </a>
+                     </li>
+                 </ul>
+             </div>
+    </nav>
+    <div class="input-group mb-3">
+
+    </div>
+    <pre id="editor" >function foo(items) {
+        var i;
+        for (i = 0; i &lt; items.length; i++) {
+            alert("Ace Rocks " + items[i]);
+        }
+      }
+    </pre>
+    <script>
+        document.getElementById("fontGroup").value=10;
+        var editor = ace.edit("editor");
+        editor.setTheme("ace/theme/monokai");
+        editor.session.setMode("ace/mode/python");
+        function setState(){
+            var editor = ace.edit("editor");
+
+
+            var t = "ace/theme/"+ document.getElementById("themeGroup").value;
+            //console.log(t);
+            editor.setTheme(t);
+
+
+            var p = "ace/mode/"+document.getElementById("optionGroup").value;
+            //console.log(p);
+            //editor.session.setMode(state);
+
+
+            var fontDetails = document.getElementById("fontGroup").value + "px monospace";
+            document.getElementById("editor").style.font = fontDetails;
+            //console.log(fontDetails);
+            editor.session.setMode(p);
+        }
+        function runCode(){
+            var editor = ace.edit("editor");
+
+            var code= editor.getValue();
+
+            console.log(eval(code));
+            //var result = iframeWindow.eval(code)
+        }
+    </script>
+</body>
+</html>

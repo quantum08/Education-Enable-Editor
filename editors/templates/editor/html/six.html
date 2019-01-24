@@ -1,0 +1,169 @@
+<html>
+
+  <head>
+
+    <title>HTML Tutorials</title>
+	
+	<title>HTML Tutorials</title>
+      {% load staticfiles %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+     <link href="http://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{% static 'editor/images/html_one.css' %}" />
+
+
+  </head>
+  <body>
+
+    <h1>HTML Tutorials</h1>
+	
+	<h2>6. HTML Forms</h2>
+	
+	<p>The HTML &ltform> element defines a form that is used to collect user input:</p>
+	
+	<p>&ltform></p>
+	<p>.</p>
+	<p>form elements</p>
+	<p>.</p>
+	<p>&lt/form></p>
+	
+	<p>An HTML form contains form elements.
+
+	Form elements are different types of input elements, like text fields, checkboxes, radio buttons, submit buttons, and more.</p>
+	
+	<h3>The &ltinput> Element</h3>
+	
+	<p>The &ltinput> element is the most important form element.
+
+	The &ltinput> element can be displayed in several ways, depending on the type attribute.
+
+	Here are some examples:</p>
+	
+	<table>
+	
+	<thead>
+	
+	<tr>
+	
+	<th>Type</th>
+	
+	<th>Description</th>
+	
+	</tr>
+	
+	</thead>
+	
+	<tbody>
+	
+	<tr>
+	
+	<td>&ltinput type="text"></td>
+	
+	<td>Defines a one-line text input field</td>
+	
+	</tr>
+	
+	<tr>
+	
+	<td>&ltinput type="radio"></td>
+	
+	<td>Defines a radio button (for selecting one of many choices)</td>
+	
+	</tr>
+	
+	<tr>
+	
+	<td>&ltinput type="submit"></td>
+	
+	<td>Defines a submit button (for submitting the form)</td>
+	
+	</tr>
+	
+	</tbody>
+	
+	</table>
+	
+	<h3>6.1 Text Input</h3>
+	
+	<p>&ltinput type="text"> defines a one-line input field for text input:</p>
+	
+	<h3>EXAMPLE</h3>
+	
+	<p>&ltinput type="text"> defines a one-line input field for text input:</p>
+	
+	<form>
+	  First name:<br>
+ 	 <input type="text" name="firstname"><br>
+  	 Last name:<br>
+ 	 <input type="text" name="lastname">
+	</form>
+	
+	<h4>Corresponding code</h4>
+	
+	<p><form></p>
+	
+	<p>First name:&ltbr></p>
+	
+	<p>&ltinput type="text" name="firstname">&ltbr></p>
+	
+	<p>Last name:&ltbr></p>
+	
+	<p>&ltinput type="text" name="lastname"></p>
+	
+	<p>&lt/form></p>
+	
+	<h3>6.2 Radio Button Input</h3>
+	
+	<p>&ltinput type="radio"> defines a radio button.
+
+	Radio buttons let a user select ONE of a limited number of choices:</p>
+	
+	<h3>EXAMPLE</h3>
+	
+	<form>
+  	<input type="radio" name="gender" value="male" checked> Male<br>
+  	<input type="radio" name="gender" value="female"> Female<br>
+  	<input type="radio" name="gender" value="other"> Other
+	</form>
+	
+	<h4>Corresponding code</h4>
+	
+	<p>&ltform></p>
+  	<p>&ltinput type="radio" name="gender" value="male" checked> Male&ltbr></p>
+  	<p>&ltinput type="radio" name="gender" value="female"> Female&ltbr></p>
+  	<p>&ltinput type="radio" name="gender" value="other"> Other</p>
+	<p>&lt/form></p>
+	
+	<h3>6.3 The Submit Button</h3>
+	
+	<p>&ltinput type="submit"> defines a button for submitting the form data to a form-handler.
+
+	The form-handler is typically a server page with a script for processing input data.
+
+	The form-handler is specified in the form's action attribute:</p>
+	
+	<h3>EXAMPLE</h3>
+	
+	<form action="/action_page.php">
+  First name:<br>
+  <input type="text" name="firstname" value="Mickey"><br>
+  Last name:<br>
+  <input type="text" name="lastname" value="Mouse"><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+	<h4>Corresponding code</h4>
+	
+	<p>&ltform action="/action_page.php"></p>
+  	<p>First name:&ltbr></p>
+  	<p>&ltinput type="text" name="firstname" value="Mickey">&ltbr></p>
+  	<p>Last name:&ltbr></p>
+  	<p>&ltinput type="text" name="lastname" value="Mouse">&ltbr></p>
+  	<p>&ltinput type="submit" value="Submit"></p>
+	<p>&lt/form></p>
+	
+	<p><a href="{% url 'editor:html_seven' %}"><input type="submit" value="Next" id="submitButton"></a>
+		</p>
+	
+	</body>
+	
+</html>
